@@ -40,14 +40,14 @@ Please follow the [installation procedure](#installation--usage) and then run th
 import 'package:useridentity_api_client/api.dart';
 
 
-var api_instance = AuthControllerApi();
+var api_instance = OpenApi();
 var loginRequest = LoginRequest(); // LoginRequest | 
 
 try {
     var result = api_instance.loginUser(loginRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling AuthControllerApi->loginUser: $e\n");
+    print("Exception when calling OpenApi->loginUser: $e\n");
 }
 
 ```
@@ -58,17 +58,22 @@ All URIs are relative to *http://localhost:6969*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AuthControllerApi* | [**loginUser**](doc//AuthControllerApi.md#loginuser) | **POST** /login | 
+*OpenApi* | [**loginUser**](doc//OpenApi.md#loginuser) | **POST** /login | Login user
 *OpenApi* | [**registerUser**](doc//OpenApi.md#registeruser) | **POST** /register | Register user
 *SystemControllerApi* | [**healthcheck**](doc//SystemControllerApi.md#healthcheck) | **GET** /system/healthcheck | 
+*UserControllerApi* | [**getUser**](doc//UserControllerApi.md#getuser) | **POST** /users/{id} | 
 
 
 ## Documentation For Models
 
  - [CreateUser](doc//CreateUser.md)
- - [CreateUserResponse](doc//CreateUserResponse.md)
  - [LoginRequest](doc//LoginRequest.md)
+ - [LoginUser](doc//LoginUser.md)
+ - [LoginUserResponse](doc//LoginUserResponse.md)
  - [RegisterRequest](doc//RegisterRequest.md)
+ - [RegisterUserResponse](doc//RegisterUserResponse.md)
+ - [User](doc//User.md)
+ - [UserResponse](doc//UserResponse.md)
 
 
 ## Documentation For Authorization

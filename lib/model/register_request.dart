@@ -2,26 +2,26 @@ part of useridentity_api_client.api;
 
 class RegisterRequest {
   
-  String email = null;
+  String phoneNumber = null;
   
   String password = null;
   RegisterRequest();
 
   @override
   String toString() {
-    return 'RegisterRequest[email=$email, password=$password, ]';
+    return 'RegisterRequest[phoneNumber=$phoneNumber, password=$password, ]';
   }
 
   RegisterRequest.fromJson(Map<String, dynamic> json) {
     if (json == null) return;
-    email = json['email'];
+    phoneNumber = json['phoneNumber'];
     password = json['password'];
   }
 
   Map<String, dynamic> toJson() {
     Map <String, dynamic> json = {};
-    if (email != null)
-      json['email'] = email;
+    if (phoneNumber != null)
+      json['phoneNumber'] = phoneNumber;
     if (password != null)
       json['password'] = password;
     return json;

@@ -1,6 +1,6 @@
 part of useridentity_api_client.api;
 
-class CreateUser {
+class User {
   
   String id = null;
   
@@ -13,16 +13,14 @@ class CreateUser {
   DateTime createdAt = null;
   
   DateTime updatedAt = null;
-  
-  String accessToken = null;
-  CreateUser();
+  User();
 
   @override
   String toString() {
-    return 'CreateUser[id=$id, username=$username, phoneNumber=$phoneNumber, isValidated=$isValidated, createdAt=$createdAt, updatedAt=$updatedAt, accessToken=$accessToken, ]';
+    return 'User[id=$id, username=$username, phoneNumber=$phoneNumber, isValidated=$isValidated, createdAt=$createdAt, updatedAt=$updatedAt, ]';
   }
 
-  CreateUser.fromJson(Map<String, dynamic> json) {
+  User.fromJson(Map<String, dynamic> json) {
     if (json == null) return;
     id = json['id'];
     username = json['username'];
@@ -34,7 +32,6 @@ class CreateUser {
     updatedAt = (json['updatedAt'] == null) ?
       null :
       DateTime.parse(json['updatedAt']);
-    accessToken = json['accessToken'];
   }
 
   Map<String, dynamic> toJson() {
@@ -51,29 +48,27 @@ class CreateUser {
       json['createdAt'] = createdAt == null ? null : createdAt.toUtc().toIso8601String();
     if (updatedAt != null)
       json['updatedAt'] = updatedAt == null ? null : updatedAt.toUtc().toIso8601String();
-    if (accessToken != null)
-      json['accessToken'] = accessToken;
     return json;
   }
 
-  static List<CreateUser> listFromJson(List<dynamic> json) {
-    return json == null ? List<CreateUser>() : json.map((value) => CreateUser.fromJson(value)).toList();
+  static List<User> listFromJson(List<dynamic> json) {
+    return json == null ? List<User>() : json.map((value) => User.fromJson(value)).toList();
   }
 
-  static Map<String, CreateUser> mapFromJson(Map<String, dynamic> json) {
-    var map = Map<String, CreateUser>();
+  static Map<String, User> mapFromJson(Map<String, dynamic> json) {
+    var map = Map<String, User>();
     if (json != null && json.isNotEmpty) {
-      json.forEach((String key, dynamic value) => map[key] = CreateUser.fromJson(value));
+      json.forEach((String key, dynamic value) => map[key] = User.fromJson(value));
     }
     return map;
   }
 
-  // maps a json object with a list of CreateUser-objects as value to a dart map
-  static Map<String, List<CreateUser>> mapListFromJson(Map<String, dynamic> json) {
-    var map = Map<String, List<CreateUser>>();
+  // maps a json object with a list of User-objects as value to a dart map
+  static Map<String, List<User>> mapListFromJson(Map<String, dynamic> json) {
+    var map = Map<String, List<User>>();
      if (json != null && json.isNotEmpty) {
        json.forEach((String key, dynamic value) {
-         map[key] = CreateUser.listFromJson(value);
+         map[key] = User.listFromJson(value);
        });
      }
      return map;

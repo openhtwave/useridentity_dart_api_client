@@ -13,14 +13,18 @@ part 'auth/oauth.dart';
 part 'auth/http_basic_auth.dart';
 part 'auth/http_bearer_auth.dart';
 
-part 'api/auth_controller_api.dart';
 part 'api/open_api.dart';
 part 'api/system_controller_api.dart';
+part 'api/user_controller_api.dart';
 
 part 'model/create_user.dart';
-part 'model/create_user_response.dart';
 part 'model/login_request.dart';
+part 'model/login_user.dart';
+part 'model/login_user_response.dart';
 part 'model/register_request.dart';
+part 'model/register_user_response.dart';
+part 'model/user.dart';
+part 'model/user_response.dart';
 
 
 ApiClient defaultApiClient = ApiClient();

@@ -38,12 +38,20 @@ class ApiClient {
           return value is double ? value : double.parse('$value');
         case 'CreateUser':
           return CreateUser.fromJson(value);
-        case 'CreateUserResponse':
-          return CreateUserResponse.fromJson(value);
         case 'LoginRequest':
           return LoginRequest.fromJson(value);
+        case 'LoginUser':
+          return LoginUser.fromJson(value);
+        case 'LoginUserResponse':
+          return LoginUserResponse.fromJson(value);
         case 'RegisterRequest':
           return RegisterRequest.fromJson(value);
+        case 'RegisterUserResponse':
+          return RegisterUserResponse.fromJson(value);
+        case 'User':
+          return User.fromJson(value);
+        case 'UserResponse':
+          return UserResponse.fromJson(value);
         default:
           {
             Match match;

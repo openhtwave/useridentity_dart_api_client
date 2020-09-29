@@ -2,26 +2,31 @@ part of useridentity_api_client.api;
 
 class LoginRequest {
   
-  String email = null;
+  String phoneNumber = null;
+  
+  String username = null;
   
   String password = null;
   LoginRequest();
 
   @override
   String toString() {
-    return 'LoginRequest[email=$email, password=$password, ]';
+    return 'LoginRequest[phoneNumber=$phoneNumber, username=$username, password=$password, ]';
   }
 
   LoginRequest.fromJson(Map<String, dynamic> json) {
     if (json == null) return;
-    email = json['email'];
+    phoneNumber = json['phoneNumber'];
+    username = json['username'];
     password = json['password'];
   }
 
   Map<String, dynamic> toJson() {
     Map <String, dynamic> json = {};
-    if (email != null)
-      json['email'] = email;
+    if (phoneNumber != null)
+      json['phoneNumber'] = phoneNumber;
+    if (username != null)
+      json['username'] = username;
     if (password != null)
       json['password'] = password;
     return json;
