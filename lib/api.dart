@@ -13,7 +13,7 @@ part 'auth/oauth.dart';
 part 'auth/http_basic_auth.dart';
 part 'auth/http_bearer_auth.dart';
 
-part 'api/open_api.dart';
+part 'api/auth_api.dart';
 part 'api/system_controller_api.dart';
 part 'api/user_controller_api.dart';
 

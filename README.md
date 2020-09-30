@@ -40,14 +40,14 @@ Please follow the [installation procedure](#installation--usage) and then run th
 import 'package:useridentity_api_client/api.dart';
 
 
-var api_instance = OpenApi();
+var api_instance = AuthApi();
 var loginRequest = LoginRequest(); // LoginRequest | 
 
 try {
     var result = api_instance.loginUser(loginRequest);
     print(result);
 } catch (e) {
-    print("Exception when calling OpenApi->loginUser: $e\n");
+    print("Exception when calling AuthApi->loginUser: $e\n");
 }
 
 ```
@@ -58,8 +58,8 @@ All URIs are relative to *http://localhost:6969*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*OpenApi* | [**loginUser**](doc//OpenApi.md#loginuser) | **POST** /login | Login user
-*OpenApi* | [**registerUser**](doc//OpenApi.md#registeruser) | **POST** /register | Register user
+*AuthApi* | [**loginUser**](doc//AuthApi.md#loginuser) | **POST** /login | Login user
+*AuthApi* | [**registerUser**](doc//AuthApi.md#registeruser) | **POST** /register | Register user
 *SystemControllerApi* | [**healthcheck**](doc//SystemControllerApi.md#healthcheck) | **GET** /system/healthcheck | 
 *UserControllerApi* | [**getUser**](doc//UserControllerApi.md#getuser) | **POST** /users/{id} | 
 
